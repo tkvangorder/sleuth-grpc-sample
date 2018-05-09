@@ -1,6 +1,6 @@
 # Spring Cloud Sleuth GRPC
 
-This project demonstrates Spring Cloud Sleuth can be combined with gRpc to propagate the distributed tracing calls when using gRpc. This project
+This project demonstrates how Spring Cloud Sleuth can be combined with gRpc to propagate the distributed tracing calls when using gRpc. This project
 uses Spring Cloud Sleuth 2.x and takes advantage of client/server gRpc intercepters that are provided by the underlying brave tracing library.
 
 This project uses [grpc-spring-boot-starter](https://github.com/LogNet/grpc-spring-boot-starter) and this library provides infrastructure to quickly
