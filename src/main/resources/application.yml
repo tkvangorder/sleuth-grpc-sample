@@ -1,0 +1,21 @@
+logging:
+  level:
+    sample: DEBUG
+
+grpc:
+  client:
+    host: localhost
+    port: 6565
+
+#Uncomment the follow three lines to disable reporting to zipkin.
+#sample:
+#  zipkin:
+#    enabled: false
+
+spring:
+  application:
+    name: testSleuthGrpc
+  sleuth:
+    sampler:
+      probability: 1.0
+    
