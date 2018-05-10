@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package sample;
 
 import org.apache.commons.logging.Log;
@@ -49,13 +48,16 @@ public class SampleGrcpApplication {
 		return GrpcTracing.create(tracing);
 	}
 
+	//grpc-spring-boot-starter provides @GrpcGlobalInterceptor to allow server-side interceptors to be registered with all 
+	//server stubs, we are just taking advantage of that to install the server-side gRPC tracer.
 	@Bean
 	@GRpcGlobalInterceptor
 	ServerInterceptor grpcServerSleuthInterceptor(GrpcTracing grpcTracing) {
-		//Install the server-side gRpc tracing interceptor provide brave, we rely on sleuth for configuring the tracing object.
-		return grpcTracing.newServerInterceptor();
+		return grpcTracing.newServerInterceptor(); 
 	}
 	
+	//We also create a client-side interceptor and put that in the context, this interceptor can then be injected into gRPC clients and
+	//then applied to the managed channel.
 	@Bean
 	ClientInterceptor grpcClientSleuthInterceptor(GrpcTracing grpcTracing) {
 		return grpcTracing.newClientInterceptor();
