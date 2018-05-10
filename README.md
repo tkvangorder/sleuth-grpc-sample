@@ -1,12 +1,7 @@
 # Spring Cloud Sleuth GRPC
 
-<<<<<<< HEAD
 This project demonstrates Spring Cloud Sleuth can be combined with gRPC to propagate the distributed tracing calls when using gRPC. This project
 uses Spring Cloud Sleuth 2.x and takes advantage of [client/server gRPC intercepters](https://github.com/openzipkin/brave/tree/master/instrumentation/grpc) that are provided by the underlying [brave](https://github.com/openzipkin/brave) tracing library.
-=======
-This project demonstrates how Spring Cloud Sleuth can be combined with gRpc to propagate the distributed tracing calls when using gRpc. This project
-uses Spring Cloud Sleuth 2.x and takes advantage of client/server gRpc intercepters that are provided by the underlying brave tracing library.
->>>>>>> branch 'master' of https://github.com/tkvangorder/sleuth-grpc-sample.git
 
 This project uses [grpc-spring-boot-starter](https://github.com/LogNet/grpc-spring-boot-starter) and this library provides infrastructure to quickly
 get gRPC working in SpringBoot.
